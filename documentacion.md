@@ -13,7 +13,9 @@
 
 - `month`: int64 y podría ser de tipo datatime, juntar cno `year`.
 
-- `flights booked`,`Flights with Companions`, `Total Flights`,`Distance`, `Points Redeemed`: todo ok a priori, son int64.
+- `flights booked`,`Flights with Companions`, `Total Flights`: todo ok a priori, son int64. Además, parece que los vuelos booked + vuelos con acompañantes = total vuelos.
+
+- `Distance`, `Points Redeemed`: todo ok a priori, son int64.
 
 - `Points Accumulated`: float64. Hay clientes que tienen por ejemplo, "474.12" puntos.
 
@@ -63,6 +65,14 @@ df_vuelo[df_vuelo.duplicated(subset='Loyalty Number',keep=False)]
 
 
 Parece que hay 3712 /  2 duplicados = `1856` ==> los eliminamos.
+
+
+`OJO!`👀
+Tras hacer todos estos cambios, nos damos cuenta de que parece que podríamos agrupar por cliente (Loyalty Number), Year y Month,  porque todas las filas podrían sumarse:
+
+![alt text](images/image20.png)
+
+
 
 ### 1.4. Estadísticas básicas iniciales:
 Cogemos sólo las columnas que nos interesan (dejo fuera de momento las fehcas y el Loyalty number):

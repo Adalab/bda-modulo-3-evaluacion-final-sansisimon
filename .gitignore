@@ -1,5 +1,8 @@
-#Archivos y carpetas del sistema
+#Ignorar archivos y carpetas del sistema
 .DS_Store
 
-#Archivos compilados de python:
+#Ignorar archivos compilados de python:
 src/__pycache__/
+
+# Ignorar la carpeta "files" y todo su contenido
+files/

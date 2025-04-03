@@ -13,5 +13,6 @@ El archivo `XXX.py` contiene una serie de pruebas por parte del profesorado de `
 ## Next steps:
 - Crear un código más `eficiente` y `sencillo`.
 - Generar `visualizaciones` atractivas e interactivas de los datos.
+- Podría ser interesante analizar el código Postal "V6E 3D9" para una posible campaña publicitaria.
 
 

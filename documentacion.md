@@ -9,9 +9,9 @@
 
 - `Loyalty Number`: int64, todo ok aparentemente.
 
-- `year`: columna int64 y podría ser de tipo datatime. Posibilidad de juntar con `month`
+- `year`: columna int64. OJO, no necesitamos convertir a datatime porque cuando aplicas el módulo de pd.to_datetime, el type de estos datos ya es int64.
 
-- `month`: int64 y podría ser de tipo datatime, juntar con `year`.
+- `month`: int64.
 
 - `flights booked`,`Flights with Companions`, `Total Flights`: todo ok a priori, son int64. Además, parece que:
 *vuelos booked + vuelos con acompañantes = total vuelos.*
@@ -129,15 +129,17 @@ df_cliente[df_cliente['Salary'] < 0].shape
 
 - `Enrollment Type`: object. Tipo de inscripción del cliente, unique: ['Standard', '2018 Promotion']
 
-- `Enrollment Year`, `Enrollment Month` : int64. Cambiar a tipo datetime.
+- `Enrollment Year`, `Enrollment Month` : int64, todo ok.
 
-- `Cancellation Year`, `Cancellation Month`: float64. Cambiar a tipo datetime.
+- `Cancellation Year`, `Cancellation Month`: float64. Cambiar a tipo int64 para que sea fecha.
 
 
 ### 2.2. Situacion inicial nulos (en %) `df_cliente`:
 
 ![alt text](images/image-6.png)
-- `Salary`: en principio, hay muy pocos nulos, lo dejaremos así porque no es representativo. Se podría hacer una imputación, pero no afectaría demasiado a la población porque es muy pequeño porcentaje. Se pueden sacar conclusiones robustas con ese % de nulos.
+- `Salary`: en principio, hay pocos nulos, lo dejaremos así porque no es representativo. De momento lo dejamos así.
+
+- `Cancellation Year`, `Cancellation Month`: Pocos nulos, pero cuando lo mergeemos se van a hacer más numerosos, porque puede que haya varias lineas por cada cliente. Confirmaremos con la empresa pero entiendo que estos 0 no es un valor nulo, si no que es que todavía siguen siendo miembros del programa de lealtad. En tal caso, intentaremos cambiar los nulos por "0", para que no sean un float y así que estas dos columnas sean int64.
 
 
 
@@ -162,9 +164,9 @@ Conclusiones iniciales, a profundizar:
 
 #### Variables numéricas `df_cliente`:
 
-Seleccionamos sólo Salary y CLV porque los meses todavía no nos dicen gran cosa, todavía tenemos que transformarlos:
+Seleccionamos Salary y CLV y las que tienen meses y años (aunque los meses y años todavía tengamos que transformarlos). Así podemos ver si hay algo raro:
 
-![alt text](images/image-10.png)
+![alt text](images/image-12.png)
 
 - `Salary`: hay salarios negativos... Como comentado anterior, ver si tras hablar con la aerolínea podemos pasarlos todos a valor absoluto.
 
@@ -174,11 +176,11 @@ Seleccionamos sólo Salary y CLV porque los meses todavía no nos dicen gran cos
 # 3. Información tras el MERGE `df`:
 
 ### 2.1. Situacion duplicados `df`:
-No debería haber, pero comprobar.
+No hay.
 
 ### 2.2. Situacion nulos (en %) `df`:
 
-- `Cancellation Year`, `Cancellation Month`: antes los nulos no preocupaban porque sólo había una línea por cliente, pero tras el merge, tenemos filas duplicadas, comprobar qué pasa con estos nulos, ¿los dejamos así?
+- `Cancellation Year`, `Cancellation Month`: quitar nulos porque los nulos son "0", es decir, que todavía siguen siendo miembros.
 
 - 
 

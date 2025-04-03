@@ -1,0 +1,5 @@
+#Archivos y carpetas del sistema
+.DS_Store
+
+#Archivos compilados de python:
+src/__pycache__/

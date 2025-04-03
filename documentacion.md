@@ -171,7 +171,7 @@ Seleccionamos sólo Salary y CLV porque los meses todavía no nos dicen gran cos
 - `CLV` (valor cliente para la empresa): en principio, por la desviación típica, parece que hay mucha dispersión en este dato.. La media y la mediana están muy alejadas.
 
 
-# 3. Información sobre la actividad de vuelo de los clientes `df` (tras el merge):
+# 3. Información tras el MERGE `df`:
 
 ### 2.1. Situacion duplicados `df`:
 No debería haber, pero comprobar.

@@ -9,7 +9,7 @@
 
 - `Loyalty Number`: int64, todo ok aparentemente.
 
-- `year`: columna int64. OJO, no necesitamos convertir a datatime porque cuando aplicas el módulo de pd.to_datetime, el type de estos datos ya es int64.
+- `year`: columna int64. OJO, no necesitamos convertir a datatime porque cuando aplicas el módulo de pd.to_datetime, el type de estos datos ya es int64. *OJO!! los datos de las reservas son sólo de 2018 y 2017!!!!*
 
 - `month`: int64.
 
@@ -199,7 +199,9 @@ No hay.
 
 ![alt text](images/image-17.png)
 
-- `salary`: tiene 25% nulos. ¿qué podemos hacer? Parece que no podemos hacer nada. He revisado si algún cliente podría tener dato en otra fila pero no es así. Se deja como está, porque las columnas `educación` y `gender` no me parecen tener suficiente relación como para imputar los nulos de `salary` completándolos con un KNNI o con un estadístico.
+- `salary`: tiene 25% nulos. ¿qué podemos hacer? 
+    - Parece que no podemos hacer nada. He revisado si algún cliente podría tener dato en otra fila pero no es así. 
+    - Posible relación con columnas `educación` y `gender`: la columna `salary` tiene mucha correlación con `education` (0.62), no así con `gender`. No obstante, la correlación con `education` no se acerca lo suficiente al 1 como para imputar los nulos. No imputamos los nulos.
 
 - `Cancellation Year`, `Cancellation Month`: Tras el merge, tenemos estas filas de clientes duplicadas porque necesitamos rellenar los vuelos asignados a ese cliente, por eso ha aumentado el número de nulos:
 

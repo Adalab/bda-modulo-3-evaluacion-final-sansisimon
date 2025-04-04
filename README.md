@@ -23,6 +23,8 @@ El objetivo de este proyecto es analizar el comportamiento de los clientes dentr
 
 - Lo más frecuente es que los clientes reserven `1 vuelo` en su experiencia de cliente con la aerolínea (la media no es del todo fiable porque hay algunos clientes que viajan mucho ellos solos o viajan mucho con tras personas)
 
+- Hay una diferencia entre el número de `vuelos reservados` y los diferentes `niveles educativos`.
+
 - La ciudad, provincia y postal code más frecuentes de la que provienen nuestros clientes es `Toronto`, `Ontario` y `V6E 3D9`.
 
 - la mayor parte de los clientes analizados (87%) siguen siendo clientes de la compañía.

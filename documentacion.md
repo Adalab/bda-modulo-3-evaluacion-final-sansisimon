@@ -217,9 +217,10 @@ Análisis nueva columna `still_client_loyalty`:
 
 ### 3.4. Estadísticas básicas completas `df`:
 
+#### Numéricas:
+
 ![alt text](images/image-18.png)
 
-#### Numéricas:
 - Lo más frecuente es que los clientes reserven 1 vuelo en su experiencia de cliente con la aerolínea (la media no es del todo fiable porque hay algunos clientes que viajan mucho ellos solos y viajan mucho con tras personas)
 
 - La distancia media recorrida por los clientes es 1220.72 millas, no obstante, como hemos comentado, no es representativo porque los clientes viajan mucho y viajan mucho acompañados. La distancia qus se encuentra en el centro de nuestros datos es: 524.00 millas.
@@ -240,5 +241,7 @@ Análisis nueva columna `still_client_loyalty`:
 - No es relevante el `género` en la condición de cliente.
 
 - la mayor parte de los clientes están `Married`.
+
+- los clientes más frecuentes tienen un nivel de educación `Bachelor` (licenciatura).
 
 

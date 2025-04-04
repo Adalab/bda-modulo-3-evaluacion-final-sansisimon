@@ -21,7 +21,7 @@ El objetivo de este proyecto es analizar el comportamiento de los clientes dentr
 - Proporción de los clientes con su tarjeta de fidelidad:
 ![alt text](images/image-20.png)
 
-- Lo más frecuente es que los clientes reserven `1 vuelo` en su experiencia de cliente con la aerolínea (la media no es del todo fiable porque hay algunos clientes que viajan mucho ellos solos y viajan mucho con tras personas)
+- Lo más frecuente es que los clientes reserven `1 vuelo` en su experiencia de cliente con la aerolínea (la media no es del todo fiable porque hay algunos clientes que viajan mucho ellos solos o viajan mucho con tras personas)
 
 - La ciudad, provincia y postal code más frecuentes de la que provienen nuestros clientes es `Toronto`, `Ontario` y `V6E 3D9`.
 
@@ -38,9 +38,9 @@ El objetivo de este proyecto es analizar el comportamiento de los clientes dentr
 
 ## Next steps:
 
-- Crear un código más `eficiente` y `sencillo`.
+- Crear un código más `organizado` y `eficiente`.
 
-- Generar `visualizaciones` atractivas e interactivas de los datos.
+- Generar un `dashbord` con los principales insights y generar `visualizaciones` interactivas de los datos.
 
 - generar un `.py` para que la limpieza y la creación de visualizaciones quede automatizada.
 

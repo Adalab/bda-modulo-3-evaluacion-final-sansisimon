@@ -175,12 +175,42 @@ Seleccionamos Salary y CLV y las que tienen meses y años (aunque los meses y a�
 
 # 3. Información tras el MERGE `df`:
 
-### 2.1. Situacion duplicados `df`:
+
+### 3.1. Situacion tipo de datos `df`:
+
+`Datos numéricos`:
+
+![alt text](images/image-13.png)
+
+- ya hemos cambiado `Cancellation Year`, `Cancellation Month` a int 64.
+
+- Tenemos que pasar `salary` a valores absolutos.
+
+`Datos objeto`:
+
+![alt text](images/image-14.png)
+
+Me parece que está todo ok.
+
+### 3.2. Situacion duplicados `df`:
 No hay.
 
-### 2.2. Situacion nulos (en %) `df`:
+### 3.3. Situacion nulos (en %) `df`:
 
-- `Cancellation Year`, `Cancellation Month`: quitar nulos porque los nulos son "0", es decir, que todavía siguen siendo miembros.
+![alt text](images/image-16.png)
 
-- 
+- `salary`: tiene muchos nulos... ¿qué podemos hacer?
+
+- `Cancellation Year`, `Cancellation Month`: Tras el merge, tenemos estas filas de clientes duplicadas porque necesitamos rellenar los vuelos asignados a ese cliente, por eso ha aumentado el número de nulos:
+
+    - Hemos eliminado los nulos igualando el dato a cero, porque hemos comprobado con la empresa que si no había dato significaba que todavía seguían en este programa de lealtad.
+
+    -  Hemos creado una columna una columna que se llama `still_client_loyalty` y que sea un booleano: SI o NO. Los 0 de la columna `Cancelation` significarán que todavía siguen siendo miembros del programa lealtad, y los que tienen fecha de cancelación, serán los que ya no forman parte del plan.
+
+Análisis nueva columna `still_client_loyalty`:
+![alt text](images/image-15.png)
+
+--> el 'si' es más frecuente, con 87.65% de los datos (=352080/401688)
+
+
 

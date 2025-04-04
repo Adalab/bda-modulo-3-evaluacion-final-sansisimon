@@ -197,9 +197,9 @@ No hay.
 
 ### 3.3. Situacion nulos (en %) `df`:
 
-![alt text](images/image-16.png)
+![alt text](images/image-17.png)
 
-- `salary`: tiene muchos nulos... ¿qué podemos hacer?
+- `salary`: tiene 25% nulos. ¿qué podemos hacer? Parece que no podemos hacer nada. He revisado si algún cliente podría tener dato en otra fila pero no es así. Se deja como está, porque las columnas `educación` y `gender` no me parecen tener suficiente relación como para imputar los nulos de `salary` completándolos con un KNNI o con un estadístico.
 
 - `Cancellation Year`, `Cancellation Month`: Tras el merge, tenemos estas filas de clientes duplicadas porque necesitamos rellenar los vuelos asignados a ese cliente, por eso ha aumentado el número de nulos:
 

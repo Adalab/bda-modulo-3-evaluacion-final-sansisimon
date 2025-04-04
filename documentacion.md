@@ -1,4 +1,4 @@
-# Análisis exploratorio de datos (EDA):
+# Análisis exploratorio de datos y limpieza:
 
 # 1. Información sobre la actividad de vuelo de los clientes `df_vuelo`:
 
@@ -103,7 +103,7 @@ Ya veremos más adelante, pero por lo general, parece que:
 
 - `Loyalty Number`: ok, int64
 
-- `Country`, `Province`,`City`, `Postal Code` : object, ok
+- `Country`, `Province`,`City`, `Postal Code` : object, ok. Todos nuestros clientes vienen de Canada.
 
 - `Gender`: object, ok. Unique: ['Female', 'Male'].
 
@@ -168,7 +168,7 @@ Seleccionamos Salary y CLV y las que tienen meses y años (aunque los meses y a�
 
 ![alt text](images/image-12.png)
 
-- `Salary`: hay salarios negativos... Como comentado anterior, ver si tras hablar con la aerolínea podemos pasarlos todos a valor absoluto.
+- `Salary`: hay salarios negativos... los pasamos a valor absoluto en la limpieza.
 
 - `CLV` (valor cliente para la empresa): en principio, por la desviación típica, parece que hay mucha dispersión en este dato.. La media y la mediana están muy alejadas.
 
@@ -203,7 +203,7 @@ No hay.
 
 - `Cancellation Year`, `Cancellation Month`: Tras el merge, tenemos estas filas de clientes duplicadas porque necesitamos rellenar los vuelos asignados a ese cliente, por eso ha aumentado el número de nulos:
 
-    - Hemos eliminado los nulos igualando el dato a cero, porque hemos comprobado con la empresa que si no había dato significaba que todavía seguían en este programa de lealtad.
+    - Hemos eliminado los nulos igualando el dato a cero, interpretando que si no había dato significaba que todavía seguían en este programa de lealtad.
 
     -  Hemos creado una columna una columna que se llama `still_client_loyalty` y que sea un booleano: SI o NO. Los 0 de la columna `Cancelation` significarán que todavía siguen siendo miembros del programa lealtad, y los que tienen fecha de cancelación, serán los que ya no forman parte del plan.
 

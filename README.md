@@ -15,7 +15,10 @@ El objetivo de este proyecto es analizar el comportamiento de los clientes dentr
 ## Next steps:
 - Crear un código más `eficiente` y `sencillo`.
 - Generar `visualizaciones` atractivas e interactivas de los datos.
-- Podría ser interesante analizar el código Postal "V6E 3D9" para una posible campaña publicitaria.
+- Podría ser interesante analizar el código Postal "V6E 3D9" para una posible campaña publicitaria así como centrarse en:
+    - Podium de estados con más clientes: (1) Ontario es el estado que más clientes tiene, (2) British Columbia, (3) Quebec.
+    - Estados con menos clientes: (1) Prince Edward Island, seguido de cerca de (2) Yulkon.
 - generar un `.py` para que la limpieza quede automatizada
+- 
 
 

@@ -90,7 +90,7 @@ Cogemos sólo las columnas que nos interesan (dejo fuera de momento las fechas y
 ![alt text](images/image-5.png)
 
 Ya veremos más adelante, pero por lo general, parece que:
--  la mitad de los clientes tienen un sólo vuelo realizado con la compañía, 
+-  la mitad de las reservas que se realizan, son sólo de un vuelo, 
 - suelen volar solos (más de la mitad vuelan solos) 
 - Vistas las estadísticas anteriores, más de la mitad, no suelen gastar puntos (tampoco acumulan demasiados porque los clientes hacen de media sólo 1 reserva).
 
@@ -214,5 +214,31 @@ Análisis nueva columna `still_client_loyalty`:
 
 --> el 'si' es más frecuente, con 87.65% de los datos (=352080/401688)
 
+
+### 3.4. Estadísticas básicas completas `df`:
+
+![alt text](images/image-18.png)
+
+#### Numéricas:
+- Lo más frecuente es que los clientes reserven 1 vuelo en su experiencia de cliente con la aerolínea (la media no es del todo fiable porque hay algunos clientes que viajan mucho ellos solos y viajan mucho con tras personas)
+
+- La distancia media recorrida por los clientes es 1220.72 millas, no obstante, como hemos comentado, no es representativo porque los clientes viajan mucho y viajan mucho acompañados. La distancia qus se encuentra en el centro de nuestros datos es: 524.00 millas.
+
+- Muy pocos clientes  utilizan los puntos del programa de lealtad (menos de un 25%) 
+
+- El salario medio de los clientes está en torno a los 79.359 dólares.
+
+
+#### Categóricas:
+
+![alt text](images/image-19.png)
+
+- La ciudad, provincia y postal code más frecuentes de la que provienen nuestros clientes es `Toronto`, `Ontario` y `V6E 3D9`.
+
+- la mayor parte de los clientes analizados (87%) siguen siendo clientes de la compañía.
+
+- No es relevante el `género` en la condición de cliente.
+
+- la mayor parte de los clientes están `Married`.
 
 
